@@ -1,0 +1,52 @@
+ Up until now you have been performing sonifications by manipulating sampled sounds. For this exercise, you will experiment with synthesis. We will be using a tool previously mentioned in class called Bfxr, which can be found here:
+
+http://www.bfxr.net/
+
+For this exercise, you will synthesize a family of notification sounds using this tool. The idea is to create one core notification sound and then apply different parameters to the sound to raise and lower its priority to the user.
+
+The reason we are using this particular tool is because a library exists to playback sounds inside of Unity using only the input parameters. This library can be installed via the Unity Asset Store for free from this link (or search for "usfxr" in the Asset Store window within Unity):
+
+https://www.assetstore.unity3d.com/en/#!/content/18619
+
+Procedure
+
+Use this input string as your starting point in the web tool (the first link from above). You can apply it by copying the string below and then selecting Paste in the web tool (or hit Ctrl/Cmd-V): 
+
+2,0.5,,0.5,,,,0.5,,,,,,,,,,,,,,,,,,1,,,,,,,masterVolume
+
+The parameters present are:
+2 = Sine Wave (changing the sound generator changes this)
+0.5 = Master Volume
+0.5 = Sustain time
+0.5 = Frequency
+1.0 = Low Pass Filter (at highest point, so all frequencies pass)
+
+All other (missing from the string) values are zero.
+
+From this, alter the parameters to see how they affect the base sound. Currently, this initial sound plays back a simple sine wave with no modifications. Experiment with each slider and note how it changes the sound. 
+
+From your experimentation, create a simple notification sound. You may play with the defaults on the left, but do not use this for your notification sound. If you do, you will not receive full credit for this exercise.
+
+After creating this sound, save your sound as a preset. Using this preset, alter the sound to lower the relative priority to the user. Imagine that there are scenarios where the sound should be very present and draw attention from the user, while there may be other scenarios where the sound is barely perceptible in the background. Create alterations of this sound for three different situations of varying priority. The scenario your notification sound is for is up to you, but you are encouraged to consider the needs of your mini-project.
+
+You should manipulate at least two parameters for each variation. You may also change the output volume, but this does not count. Look at the filters and effects present in the tool. Experiment with the different oscillators (sound generators).
+
+Submission
+
+For your submission, describe the scenario you have chosen as well as the thought process behind your notification sound and how it supports the scenario/environment. Describe which parameters you manipulated in your priority variations and why you chose them. (0.5/1.0)
+
+For each of your sounds, select COPY from the web interface and paste the resulting string into your description/design justification. We should be able to paste the each of these strings back into Bfxr and see the parameters you chose. (0.25/1.0)
+
+In addition, export your original sound as a WAV file from the web tool in addition to the versions with lower/higher priority. There should be three WAV files total. (0.25/1.0)
+
+Place your description in the comment box on T-Square (this includes the parameter strings you pasted) and attach the WAV files. Do not zip them up before attaching them.
+
+Extra Credit
+
+For extra credit (+1 point on your final grade), create a Unity project with a simple UI that plays back each of your sounds from the original input string using the usfxr library referenced above. If you chose this option, you must create and attach a unitypackage containing your scene and the scripts that interface with the usfxr library to your submission. There should be no WAV files in this package... all of the sounds should be created on the fly by USFXR at runtime.
+Original submission text
+  Low Priority: 2,0.34,0.095,0.535,,0.105,,0.325,0.28,,,,,,,,,,,,,,,,,1,,,,,,,masterVolume
+     For the Low priority, i extended the substain time and decay time to give it a bit fade out effect.  I lower the frequency so it sounds pleasant and not too disruptive.  
+
+High Priority: 2,0.5,,0.51,,,,0.64,,,0.02,0.03,,0.05,,,,,,,,,,,,1,,,,,,,masterVolume
+     For the high priority, i is suppose to gather the user's attention immediatly, so it comes with a high frequency with short attach durantion time; however, it has a substanin time that is long enough for the user to hear the full notificaiton sound.  There're not fide in/out effect because it is not needed in an urgent situation. 

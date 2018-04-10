@@ -1,0 +1,93 @@
+For this assignment, you will be creating an interface that approximates the functionality of an eight-track player. The write-up is a little long, but it designed to answer most of the questions you may have.
+
+Background
+
+As we discussed in the history of audio lecture, an eight-track cassette had four stereo tracks of audio in parallel on a single strip of magnetic tape. The playback head would physically shift across the tape when a different track was selected. As a result, if one was listening to song #1 and switched to song #2 halfway through, song #2 would be heard from that point forward. In order to hear the beginning of song #2, the tape would have to be rewound to the beginning, then switched to song #2.
+
+https://web.archive.org/web/20120610022110/http://www.8trackheaven.com/archive/early.html
+
+Requirements (Functionality and Feedback)
+
+Functionality
+
+You will be creating an interface that replicates the basic functionality of an eight-track player. It should have the following controls:
+
+- Play: Starts/Resumes playback of the currently selected track/file from its current playback position.
+- Stop: Stops playback of the currently selected track/file. If played again, it should resume where it left off.
+- Pause: Stops playback of the currently selected track/file, then resumes where it left off when pressed again. (Essentially, it functions like the Play button when the audio is stopped, and functions like the Stop button while the audio is playing).
+- Fast Forward: Plays the current track forwards at a fast rate of speed until it reaches the end of the file or the STOP button is pressed. (note: 8 track players could not rewind) See AudioSource.pitch. When fast forwarding, the audio should playback (this will make it easier for us to hear that it is working)
+- Next Track: Switches from the current track/file to the next one. If the track/file is currently playing when switched, it should continue playback at the same playback point (relative to the beginning) when the new track is loaded. If the playback position is greater than the length of the track being switched to, then you should set the playback position to the beginning and play from there.
+- Previous Track: Switches from the current track/file to the previous one. Same functionality as the Next Track button otherwise.
+- Reset: Button that resets/rewinds the playback position of the audio player to the beginning.
+- Volume: Slider that controls the volume of playback (from 0 -> 1)
+
+You may use any music you like for the four tracks, but they must be different lengths. You can find public domain or creative commons tracks via this link:
+
+http://creativecommons.org/legalmusicforvideos
+
+Feedback
+
+In addition to playing back the four different music tracks, you should also design a set of sounds that plays in conjunction with each discrete action (e.g. buttons being pressed). These sounds can take any form you want as long as they are thematically consistent. For instance, you could have mechanical sounds play when each button is pressed, or you could take a more fantastical route. These sounds should be short and clearly heard each time the buttons are pressed.
+
+The sound for the volume control is optional, but you need a sound for all of the other controls. This means you need a sound effect to play when each of the following controls are used, and each sound effect should be distinct from one another:
+
+Play, Fast Forward, Pause, Next Track, Previous Track, Reset
+
+Sound effects should also be prepared in an audio editor such as Audacity or OcenAudio. There should be no silence before the sound effect begins, sounds should be normalized, etc. 
+
+Labels
+
+Your controls must all be labeled with text UI elements, either on the controls themselves (buttons) or beside them (sliders).
+
+In addition, you should have a text label that shows the current playback position in seconds. This can be automatically be updated using Unity's new UI system (this will be shown in class).
+
+Constraints
+
+You may only use a single Unity AudioSource for playback of your four tracks. You must switch the AudioClip in code when the tracks are switched. This is most easily done by declaring a public array of AudioClips (e.g. AudioClip[] ) and maintaining an index of which clip you are currently playing. When you switch, you will assign the new AudioClip to the clip property of your AudioSource. You will not receive credit for track switching if you do not follow this constraint.
+
+Please note that you are allowed to have separate AudioSources for sound effects, if desired. See also AudioSource.PlayOneShot().
+
+It is recommended to setup an Audio Mixer with separate groups for your sound effects and music tracks. You can then set the output of the appropriate AudioSource Components to these groups and control their overall volume. This is not a requirement, but this will prove useful for your future Assignments.
+
+Sound files longer than 10 seconds should be compressed to Ogg Vorbis or the MP3 format before being brought into Unity. MP3 files should be transcoded to Ogg Vorbis before being brought into Unity. This can be done by opening them in Audacity or OcenAudio and exporting them as Ogg Vorbis (or mp3). You will lose five points for using uncompressed files instead of compressed ones for your long sounds.
+
+
+Key Documentation
+
+AudioClip - http://docs.unity3d.com/ScriptReference/AudioClip.html
+AudioSource - http://docs.unity3d.com/ScriptReference/AudioSource.html
+Unity Audio Tutorial Videos: http://unity3d.com/learn/tutorials/modules/beginner/audio (the other tutorials are also worthwhile to review, particularly UI)
+
+All of your code should be written in C#, but it is not strictly required. Unity's JavaScript implementation is not consistent with the behavior of JavaScript on the web (and it is also harder to debug), so use it at your own risk. 
+
+Submission
+
+When you are finished with your assignment, create a folder in Unity's Project pane with your name in this format:
+
+LastnameFirstName_HW1
+
+You should then move all of the files (sound sources, scene files, scripts, etc) in your project to this folder. IMPORTANT: Do this within Unity and not within Explorer or Finder! 
+
+Finally, right click on your folder and select "Export Package...", which will compress your files to a .unitypackage. Make sure all of your files are included.
+
+Submit this .unitypackage along with a short readme document explaining anything we need to know to make your project work as well as a short explanation of what your design intent was behind your sound effects. e.g. If you chose simple beeps, justify why you chose them. This readme should be a .pdf file. The readme is not optional for this assignment.
+
+TL;DR - attach your files as a unitypackage along with any other required documents.
+
+Grading Criteria
+UI - 20 points
+All controls labeled and present - 10 points
+Playback position label reflects current playback in seconds - 10 points
+Controls function - 50 points
+Play - 10
+Stop - 10
+Pause - 5
+Reset - 5
+Track Switching - 20
+Tracks switch - 10
+Tracks switch while maintaining playback position - 5
+Tracks switch while playing (e.g. switching from track 1 to 2 will result in 2 beginning to play at its correct position when the tracks are switched) - 5
+Sound effects present - 10 points
+Sound effects are audible and consistent - 10 points
+Submission Guidelines Followed + Readme present - 10 points
+Please note that we are not grading you on the visual appearance of your 8-track player, but you are welcome to be as creative as you wish (as long as it is usable). Make sure that you have all the functionality working before concentrating on the appearance of your interface! 

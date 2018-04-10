@@ -1,0 +1,13 @@
+For this exercise, you will be implementing the visuals of simple Unity objects to respond to specific frequency data obtained from GetSpectrumData().
+
+Using the attached .unitypackage, modify the included C# script to change the Y-scale of the cubes in the default scene based on values obtained from GetSpectrumData. There are two drum loops, both including a bass drum sound and a snare drum sound. At a minimum, the left cube should respond to the bass while the right cube responds to the snare.
+
+Optionally, you may change the visuals to whatever you choose, or include an excerpt from another piece of music with more instrumentation. Feel free to get creative and try things that you are not sure will work or not.
+
+When you are finished, rename the audio_visualization_exercise folder in the Project pane with your name in the following format (LastNameFirstName_Exercise6) and put all of the files inside of it. Right click on this folder, select "Export Package" and export it to the Desktop. Attach that file to this assignment and submit. This package should include the original source files from the original package along with your modifications.
+Additionally, in the in-line comments field below, write a short paragraph listing your general strategy for tackling this exercise and where your visualization succeeds and fails.  There is no one single "right answer" as long as you justify your choice.
+
+Additional resources for assignment
+File attachment audio_visualization_exercise.unitypackage ( 439 KB; Oct 22, 2015 12:11 pm )
+Original submission text
+ As the frequency range return by a FFT can only be range from 0 to the max Frequency of an audio/2.  Nyquist Frequency is used.  When doing a FFT analaysis on the audio, it can been see that the when snare drum is play, the higher frequency is much more pleasant.  While when the drum is play, only lower frequency is present.  Therefore, simply loop through the frequency domain for the low frequency section to caputre the drum and the mid to high portion of the frequency domain to capture change the snare sound. 

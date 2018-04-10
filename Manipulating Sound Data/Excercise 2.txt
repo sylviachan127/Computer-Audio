@@ -1,0 +1,28 @@
+For this exercise, you will be implementing a simple noise gate to remove samples that fall beneath a fixed amplitude threshold.
+
+Using the attached .wav file, write a C# Component in Unity that takes in a wav file as input and removes (zeroes out) samples from a waveform that fall beneath a certain threshold. This threshold should not be hard coded. Instead, you should declare a noiseThreshold float in your script in the following manner, which will allow you to modify the value in the Editor during testing:
+
+public AudioClip input;
+
+[Range (0, 1)]
+public float noiseThreshold = 0.5f;
+
+When the "Play" button is pressed, a new AudioClip should be created with manipulated sound data and this new AudioClip should immediately play back. You should look at AudioClip.Create, AudioClip.GetData, and AudioClip.SetData from the AudioClip documentation in order to do this. I will be covering this during our class session, as well.
+
+When you are finished, make a folder in the Project pane with your name in the following format (LastNameFirstName_Exercise1) and put all of the files inside of it (including the attachment). Right click on this folder, select "Export Package" and export it to the Desktop. Attach that file to this assignment and submit. This package should include the original sound file (attached below), the script you wrote to process the audio, and a scene that when opened and played will demonstrate the functionality of your script. 
+Finally, in the in-line comments field below, write a short paragraph listing:
+
+1) Which threshold value you chose and describe why you chose that specific threshold value (saying "because it sounds best" is not enough... explain it like you were explaining this concept to someone who was unfamiliar with audio concepts). 
+2) What are the benefits and drawbacks of this particular approach to implementing a noise gate? 
+3) What could be done to improve this approach? Consider this question from a high/conceptual level, you do not need to get into the implementation weeds. 
+
+There is no one single "right answer" as long as you justify your choice. 
+
+The code is worth 50% and the write-up is worth 50% of this exercise. If you turn in both, you will get full credit. 
+
+Original submission text
+1) I choose 0.1f as my noice threshold because afteio9r experiment with some other number of threshold, this yeild the best result.  This makes sense given then if I have a noice threshold too high, then it will elimate ways too many samples that are not noises, and if I have it too low, then most of the noices would still present.
+
+2) The benefits of doing that is the threshold can be alter easily, and noise can be elimate in a very quick manner.  However, by doing so we are removing parts of the samples that are not noises but fall under the threshodl as well, which result with a new sound that sounds chipping away.
+
+3) To gather the max and average amplitude of the the sounds files, and only elimate the sounds if the sample's amplitutde falls below the average amplitutde which we can consider that as the noise. 

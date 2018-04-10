@@ -1,0 +1,22 @@
+For this exercise, you will be using a audio/video editor to replace the audio of a short clip with your own sound effects and ambient sounds (recorded yourself or sourced from Freesound, etc.). If you have a video editor you are comfortable with, you may use that, but everything you need to accomplish this assignment can be done with Reaper, which can be downloaded here as a fully functional free trial (we will also review this in class):
+
+http://www.reaper.fm/download.php (download 32 bit version)
+
+Using Reaper (or your editor of choice), you will replace the audio of a short film clip (approximately 30 seconds) from archive.org. You may use any film clip from this site you wish. If you do not have strong feelings about the clip you wish to replace the audio for, you can download a vintage commercial:
+
+https://archive.org/details/classic_tv_commercials
+
+Steps:
+
+1) Identify the clip (and download it, the H.264 version should suffice).
+2) Write down a list of sounds that you will need for your audio replacement (this will be your asset list).
+3) Obtain sound files that match this asset list (you may deviate during your editing process, just add the new files you use to your asset list).
+4) Composite the clips onto separate tracks and render the output as an mp4 when you are finished.
+
+You should consider both ambient (background) sounds as well as foreground sounds, but you are allowed considerable creativity with this. You may go for strict realism or cartoon slapstick, but your sounds should be consistent with one another.
+
+For your submission, please include:
+
+- a document with your asset list (as well as the URL of the source video you used) as well as your general design philosophy for this assignment (~one paragraph)
+- a zip file containing the project you created
+- an mp4 file of your final output

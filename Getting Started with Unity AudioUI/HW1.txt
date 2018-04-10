@@ -1,0 +1,22 @@
+Choose Normal or Challenge Mode below!
+
+Normal Mode
+
+1) Using Freesound.org, find a short sound that can be used as a sound effect. Download the original.
+2) Optional: If needed, edit the sound to remove trailing and leading silence, normalize, etc. Save this as a copy of the original.
+3) Import the sound (and the edited one as well, if you made one) and attach it to an AudioSource in the Hierarchy.
+4) Create a Unity UI button that when pressed plays this sound once. Each time the button is pressed, the sound should play from the beginning.
+
+Challenge Mode
+
+1) Using Freesound.org, find a sound file of an ambient background sound (children playing at the playground, a forest at night, etc). Download the original.
+2) Using an audio editor, create a shorter section of this larger file that loops seamlessly (we will discuss this in class). The sound file should be between 10-30 seconds.
+3) Bring both the original sound file and edited soundfile into Unity (you will export both as part of the submission).
+4) Create two buttons using the Unity UI and an AudioSource. The AudioSource should hold your edited AudioClip. The buttons should call the Play() and Stop() methods on the AudioSource. The sound should not play automatically when the scene is started (turn off Play On Awake).
+
+Submission
+
+5) With this done, save your Scene file as "ICE1", "In Class Exercise 1", or another obvious name.
+6) Place this scene file and both of your sounds in a new folder called LastNameFirstName_ICE1.
+7) Right click this folder and select "Export as package...", name this file the same as your folder.
+8) Attach this package to this assignment and submit.

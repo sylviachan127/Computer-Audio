@@ -1,0 +1,30 @@
+For this exercise, you will be implementing the functionality similar to a Geiger Counter. This should have two sliders that manipulate the playback interval (this maps to the radiation count) and a second slider that manipulates the playback speed/pitch (this maps to the distance the user is from the sounds).
+
+For your sonification, you should use a single sound of your choice (you can use a sound similar to the click of a traditional Geiger Counter, or some other source sound that you deem appropriate). You will want to synthesize this sound (e.g. using Bfxr - http://www.bfxr.net/ ) or find an existing recorded sample (e.g. download a sound from Freesound - http://www.freesound.org/ ). You will likely want to edit your sound in a sound editor to make sure it has no leading silence, is normalized, etc. 
+
+Note that this can be an uncompressed sound file (WAV)... it does not need to be compressed before being brought into the Editor (this is generally true for very short sound files, only long files greater than 10 seconds need to be compressed before being brought into the Editor).
+
+After bringing in your sound, you will want to write a script that will:
+
+- schedule the sound to playback at a fixed interval (e.g. every 0.2f seconds) that can be manipulated by one of your UI sliders.
+- change the pitch of the AudioSource (or volume) based on the value of the second slider
+
+You may also add Start and Stop playback buttons, etc, but this is not strictly required.
+
+After you get this working, you are strongly encouraged to change the different values and pitch manipulations to create a more pleasing/effective sonification. Your goal here is not only to implement the technical parts to drive the sonification, but to also consider if this is something YOU would want to listen to. 
+
+In the comments field below, discuss:
+
+1) Is this an effective sonification? What makes it effective or less effective?
+2) How could you improve the sonification? 
+3) Imagine you are out in the field searching for radiation. What are other possible things you could sonify in this situation? Brainstorm a few ideas without worrying about whether they are completely feasible or not... the more outlandish ideas can sometimes suggest more pragmatic ideas that you would have never arrived at otherwise.
+
+For your attachment, attach the Unity package in the usual format (LastnameFirstname_Exercise2.unitypackage). This should include your code, the sound file(s) you used and a scene that will show your code in action (with the appropriate slider controls).
+
+Write-up (50%) - Code (50%)
+Original submission text
+ 1) Yes, at high pitch and interval setting, the sounds is annoying and sharp to get people's attention.  But when it is at normal states, it is very pleasent to the ear, but short and clear at the same time.
+
+2) To get a tone that is more pleasant to the ear under normal state. Perhaps increase pitch along with increasing volume to singal bad, thus gets people's attention to react faster.  Perhaps shortend the interval min and max value.
+
+3) footstep, so i can tell which way people are running from and to.  The rate of radiation intensity is changing at.  

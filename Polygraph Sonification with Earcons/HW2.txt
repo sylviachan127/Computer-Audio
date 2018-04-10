@@ -1,0 +1,69 @@
+For this assignment, you will be creating a sonification of a polygraph (aka lie detector).
+
+Background
+
+http://en.wikipedia.org/wiki/Polygraph
+
+Typically, physiological responses are recorded on a sheet of paper, which is then interpreted by the operator to determine whether the response of a subject to a question is a lie or not.
+
+For your implementation, you will create a system that will simulate a sonification of the input data as well as alerts for whether a subject is telling the truth or lying. You will not use actual data. Instead, you will present an interface that allows a user to simulate different conditions, as specified below.
+
+Requirements (Sound Selection, Functionality and Feedback)
+
+Sound Selection
+
+You must use earcons for this sound system. You may not use auditory icons (e.g. heartbeat or breathing sounds). You can use any sound source you choose (synthesized or sampled, but it is expected that you will modify your sounds to create a specific effect). We will examine sounds created/edited for preparation.
+
+Functionality
+
+Your interface will present the following controls, which in total represent two ambient sound channels and three types of alerts:
+
+- Ambient sound channel representing the heart rate of the subject, manipulated by a slider (to simulate low and high heartbeats). There should be a second slider that controls the volume of this source
+- Ambient sound channel representing the respiration rate of the subject, manipulated by a slider (to simulate low and high breathing). There should be a second slider that controls the volume of this source, as well.
+- Alert that notifies that a rapid change in galvanic skin response (GSR) has taken place. This typically happens at the onset of an emotional response. This response should be triggered by a button and should also have a slider that tweaks the sound based on the severity of the emotional response.
+- Alert that notifies that a question has been answered truthfully. This response should be triggered by a button and should also have a slider that tweaks the sound based on the degree of confidence the system has that it is a true answer.
+- Alert that notifies that a question has been answered falsely (a lie). This response should be triggered by a button and should also have a slider that tweaks the sound based on the degree of confidence the system has that it is a false answer.
+
+Presets
+
+In addition to these controls, you should have four buttons that automatically configure your interface to play back certain scenarios:
+
+- The subject is calm.
+- The subject is excited, but telling the truth.
+- The subject is excited, but telling a lie.
+- The subject is moderate (between calm and excited), but a GSR spike/emotional response is detected.
+
+Labels
+
+Your controls must all be labeled with text UI elements, either on the controls themselves (buttons) or beside them (sliders).
+
+Submission
+
+When you are finished with your assignment, create a folder in Unity's Project pane with your name in this format:
+
+LastnameFirstName_HW2
+
+You should then move all of the files (sound sources, scene files, scripts, etc) in your project to this folder. IMPORTANT: Do this within Unity and not within Explorer or Finder! 
+
+Finally, right click on your folder and select "Export Package...", which will compress your files to a .unitypackage. Make sure all of your files are included.
+
+Submit this .unitypackage along with a short design document (1-2 pages) explaining anything we need to know to make your project work as well as a short explanation of what your design intent was behind your sound selection and presentation. You should leverage what you have learned so far in this class about human perception, the properties of sound and auditory design. This readme should be a .pdf file. The readme is not optional for this assignment.
+
+Grading Criteria
+
+Technical Specifications - 70%
+Write-Up / Design - 30%
+
+If your assignment is completely technically functional, you will receive the full 70 points regardless of how it actually sounds.
+
+For the remaining 30 points, we will evaluate how effective your sonification is at accomplishing the prescribed task. You will want to justify your design choices in your write-up using perceptual principles, the environment the user of this system will be inhabiting, etc. If you are uncertain if your design is successful, consult with us before the (Tuesday) due date and we can give you feedback on your system.
+
+Late Policy
+
+Assignments are due at 11:55pm on Tuesday, October 7th. However, T-Square will continue to accept your assignments until 11:30am on Wednesday. If T-Square is down, email your assignment to Rob (rob@imtc.gatech.edu) with the subject line "[cs4590] HW2Submission". If your unitypackage is too large for an email attachment, post it to a public web server/Dropbox share and send the link with this email.
+
+After 11:30am on Wednesday, no assignments will be accepted. No exceptions. If an email is received at 11:30am with a submission, it will not be accepted. The due date is 11:55pm on Tuesday, not 11:30am on Wednesday.
+
+Please note that if you have an external circumstances that will prevent a timely submission, please contact Rob before the assignment is due (11:55pm on Tuesday).   
+
+Please use the PIazza section for any questions or clarifications regarding this assignment. (tag posts with HW2) You don't have to finish this assignment early, but it is advised that you start on it early so you can make a better estimation of how much time it will take.
